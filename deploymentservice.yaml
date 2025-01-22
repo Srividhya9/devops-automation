@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
+  namespace: default
   name: spring-boot-k8s-deployment
 spec:
   selector:
@@ -25,6 +26,7 @@ spec:
 apiVersion: v1 # Kubernetes API version
 kind: Service # Kubernetes resource kind we are creating
 metadata: # Metadata of the resource kind we are creating
+  namespace: default
   name: springboot-k8ssvc
 spec:
   selector:
